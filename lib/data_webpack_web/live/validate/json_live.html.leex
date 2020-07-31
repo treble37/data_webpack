@@ -1,0 +1,27 @@
+<div class="validate-container">
+  <%= form_tag "#", [method: :get, id: "json-validator", phx_submit: :validate_json] %>
+      <div class="row">
+        <div class="col">
+          <%= if @info do %>
+            <p class="success_message"><%= @info %></p>
+          <% end %>
+          <%= if @error do %>
+            <p class="error_message"><%= @error %></p>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <label for="json-label">Paste Your JSON Here</label>
+          <div id="ignore" phx-update="ignore">
+            <textarea id="json-code" class="json-validator-textarea" name="json_code" phx-hook="loadEditor"><%= @json_code %></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <%= submit "Validate", class: "button" %>
+        </div>
+      </div>
+    </form>
+</div>

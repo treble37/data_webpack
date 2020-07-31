@@ -18,6 +18,7 @@ defmodule DataWebpackWeb.Router do
     pipe_through :browser
 
     live "/", PageLive, :index
+    live "/validate", Validate.JsonLive, :show
   end
 
   # Other scopes may use custom stacks.
