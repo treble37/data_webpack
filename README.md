@@ -11,6 +11,12 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
 
+### Demo Instructions
+
+1) start Phoenix server as described above
+2) Navigate to `http://localhost:4000/validate`
+3) Paste your JSON and validate!
+
 ## Learn more
 
   * Official website: https://www.phoenixframework.org/
